@@ -6,9 +6,14 @@ import React from 'react';
 // import ForwardingRefs from './components/ForwardingRefs/index';
 // import Fragments from './components/Fragments/index';
 // import HigherOrderComponents from './components/HigherOrderComponents';
-import IntegratingWithOtherLibraries from './components/IntegratingWithOtherLibraries/index';
+// import IntegratingWithOtherLibraries from './components/IntegratingWithOtherLibraries/index';
 // import JSXInDepth from './components/JSXInDepth/index';
-import OptimizingPerformance from './components/OptimizingPerformance/index';
+// import OptimizingPerformance from './components/OptimizingPerformance/index';
+// import Portals from './components/Portals/index';
+// import ProfilerAPI from './components/ProfilerAPI';
+// import Reconciliation from './components/Reconciliation/index';
+// import RefsAndTheDOM from './components/RefsAndTheDOM/index';
+import RenderProp from './components/RenderProp/index';
 
 class App extends React.Component {
     render() {
@@ -22,9 +27,14 @@ class App extends React.Component {
                 {/* <ForwardingRefs /> */}
                 {/* <Fragments /> */}
                 {/* <HigherOrderComponents /> */}
-                <IntegratingWithOtherLibraries />
+                {/* <IntegratingWithOtherLibraries /> */}
                 {/* <JSXInDepth /> */}
-                <OptimizingPerformance />
+                {/* <OptimizingPerformance /> */}
+                {/* <Portals /> */}
+                {/* <ProfilerAPI /> */}
+                {/* <Reconciliation /> */}
+                {/* <RefsAndTheDOM /> */}
+                <RenderProp />
             </div>
         );
     }
