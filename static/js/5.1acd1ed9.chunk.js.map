@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/CodeSplitting/otherComponents/math.js"],"names":["module","exports","add","a","b"],"mappings":"4IAIAA,EAAOC,QAAU,CAAEC,IAJnB,SAAaC,EAAGC,GACZ,OAAOD,EAAIC","file":"static/js/5.1acd1ed9.chunk.js","sourcesContent":["function add(a, b) {\n    return a + b;\n}\n\nmodule.exports = { add };"],"sourceRoot":""}
