@@ -20,12 +20,17 @@ class Mouse extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            x: 0, y: 0
+            x: 0, y: 0, scroll: 0, allow: false
         }
         document.onmousemove = (e) => {
-            this.setState({ x: e.clientX, y: e.clientY });
+            const { scrollTop } = document.documentElement;
+            this.setState({ x: e.clientX, y: scrollTop + e.clientY });
+
         }
-        this.props.render(this.state);
+        
+    }
+    handleChange(e) {
+        this.setState({ allow: e.target.checked })
     }
     render() {
         // Instead of providing a static representation of what <Mouse> renders, 
@@ -33,6 +38,7 @@ class Mouse extends React.Component {
         return (
             <div>
                 <p>The current mouse position is ({this.state.x}, {this.state.y})</p>
+                <input type="checkbox" onChange={this.handleChange.bind(this)} checked={this.state.allow} /> enabel toggle image
                 {/* <Koala mouse={this.state} /> */}
                 {this.props.render(this.state)}
                 {this.props.anotherRender()}
@@ -47,6 +53,9 @@ class Koala extends React.Component {
             isShow: false,
         }
         document.onclick = () => {
+            if (!this.props.mouse.allow) {
+                return;
+            }
             this.setState(state => ({ isShow: !state.isShow }));
         }
     }
@@ -56,12 +65,14 @@ class Koala extends React.Component {
             return (
                 <img 
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Koala_climbing_tree.jpg/240px-Koala_climbing_tree.jpg"
-                    style={{ position: "absolute", left: mouse.x, top: mouse.y, width: "100px" }}
+                    style={{ position: "absolute", left: mouse.x, top: mouse.y, width: "100px", height: "auto" }}
                     alt="Koala"
                 />
             );
         }
-        return false;
+        else {
+            return <h1>Hi</h1>
+        }
     }
 }
 

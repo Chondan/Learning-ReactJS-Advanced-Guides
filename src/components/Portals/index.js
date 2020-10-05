@@ -71,7 +71,7 @@ class Child extends React.Component {
     render() {
         return (
             <div className="modal">
-                <button>Click</button>
+                <button>I come from Portals section and I'm not rendered in root element.</button>
             </div>
         );
     }

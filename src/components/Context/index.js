@@ -127,10 +127,9 @@ class UserStatus extends React.Component {
 const CaveatExampleContext = React.createContext({ something: "something" });
 function CaveatExample() {
     const [number, setNumber] = useState(Math.random().toFixed(2));
-    const [contextValue, setContextValue] = useState({ something: "something" });
     return (
         <React.Fragment>
-            <CaveatExampleContext.Provider value={contextValue}>
+            <CaveatExampleContext.Provider value={"contextValue"}>
                 <CaveatExampleChild />
             </CaveatExampleContext.Provider>
             <span>number: {number} </span>
